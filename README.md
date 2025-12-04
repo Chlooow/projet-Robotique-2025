@@ -41,6 +41,52 @@ Le robot doit :
 # Architecture ROS
 
 Le système repose sur **deux nœuds principaux** : 
+
+#### 1. `object_detector.py`
+Détecte l’objet coloré et calcule son erreur de position.
+
+##### Fonctionnalités :
+- Récupération du flux caméra  
+- OpenCV : filtre de couleur (HSV)  
+- Extraction du plus grand contour  
+- Calcul du centre de l’objet  
+- Publication de l’erreur de suivi
+
+##### Topics :
+| Rôle       | Topic                        | Type                |
+|------------|------------------------------|---------------------|
+| Subscribe  | `/camera/rgb/image_raw`      | sensor_msgs/Image   |
+| Publish    | `/object_error`              | std_msgs/Float32    |
+| Publish    | `/object_size`               | std_msgs/Float32    |
+
+#### 2. `object_follower.py`
+Contrôle le robot selon l’erreur détectée.
+
+##### Fonctionnalités :
+- Récupère l’erreur de position  
+- Tourne à gauche/droite pour aligner l’objet  
+- Avance si l’objet est loin  
+- S’arrête si l’objet est trop proche
+
+
+##### Topics :
+| Rôle       | Topic             | Type                    |
+|------------|-------------------|-------------------------|
+| Subscribe  | `/object_error`   | std_msgs/Float32        |
+| Subscribe  | `/object_size`    | std_msgs/Float32        |
+| Publish    | `/cmd_vel`        | geometry_msgs/Twist     |
+
+## Topics utilisés
+
+| Topic                    | Description                              |
+|--------------------------|------------------------------------------|
+| `/camera/rgb/image_raw` | Flux vidéo de la caméra du robot         |
+| `/object_error`         | Erreur horizontale (position de l’objet) |
+| `/object_size`          | Taille de l’objet (distance approximée)  |
+| `/cmd_vel`              | Commandes moteurs                        |
+
+# Structure du package
+
 ## Collaborateurs :
 
 Chloé Makoundou et Tugba Bulut
@@ -50,4 +96,5 @@ Chloé Makoundou et Tugba Bulut
 - Un nœud ROS traite l’image via OpenCV.
 - Le robot calcule un erreur de position de la ligne
 - Le robot avance en corrigeant en permanence sa trajectoire
+
 
