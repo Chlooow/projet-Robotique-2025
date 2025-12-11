@@ -4,6 +4,8 @@ Ce projet a été réalisé dans le cadre de l’option **Robotique** du Master 
 
 L’objectif est de développer un **robot TurtleBot3 Waffle** capable de **suivre un objet coloré** (ex : cube rouge) grâce à sa caméra et à un traitement d’image en temps réel via **ROS** et **OpenCV**.
 
+## Scénario 1: Robot reconnaissant la couleur
+
 Le robot doit :
 
 1. **Détecter un objet spécifique** (principalement une couleur, ex. rouge).  
@@ -91,10 +93,5 @@ Contrôle le robot selon l’erreur détectée.
 
 Chloé Makoundou et Tugba Bulut
 
-## Scénario 3 : Robot suiveur de ligne
-- La caméra capture une image du sol.
-- Un nœud ROS traite l’image via OpenCV.
-- Le robot calcule un erreur de position de la ligne
-- Le robot avance en corrigeant en permanence sa trajectoire
 
 
