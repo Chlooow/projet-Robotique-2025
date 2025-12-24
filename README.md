@@ -2,7 +2,7 @@
 
 Ce projet a été réalisé dans le cadre de l’option **Robotique et aide au diagnostic** du Master 1 Informatique & Big Data (2025/2026) à l'Université Paris 8.
 
-**Collaborateurs :** Tugba Bulut et Nsonde Chloé Makoundou.
+**Collaborateurs :** Tugba Bulut et Chloé Makoundou.
 
 ## 🎯 Présentation du projet
 L'objectif de **Vigilis** est de concevoir un système de surveillance autonome capable d'identifier une cible (un cylindre rouge) via une caméra, de la suivre en temps réel et de maintenir une distance de sécurité constante.
@@ -26,3 +26,4 @@ catkin_ws_3/
         │   └── object_follower.py  # Nœud de commande (Mouvement)
         └── worlds/
             └── projet.world        # Environnement Gazebo
+
