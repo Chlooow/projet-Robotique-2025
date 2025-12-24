@@ -51,18 +51,10 @@ Le noeud pilote le robot sur `/cmd_vel` via un asservissement visuel:
 
 | Topic | Type | Rôle |
 | --- | --- | --- |
-| `/camera/rgb/image_raw` | `sensor_msgs/Image` | Flux vidéo brut.
-
- |
-| `/object_error` | `std_msgs/Float32` | Erreur horizontale (décalage).
-
- |
-| `/object_size` | `std_msgs/Float32` | Taille de la cible (distance relative).
-
- |
-| `/cmd_vel` | `geometry_msgs/Twist` | Commandes de mouvement.
-
- |
+| `/camera/rgb/image_raw` | `sensor_msgs/Image` | Flux vidéo brut. |
+| `/object_error` | `std_msgs/Float32` | Erreur horizontale (décalage). |
+| `/object_size` | `std_msgs/Float32` | Taille de la cible (distance relative). |
+| `/cmd_vel` | `geometry_msgs/Twist` | Commandes de mouvement. |
 
 ## Lancement
 
@@ -73,3 +65,4 @@ source devel/setup.bash
 roslaunch robot projet.launch
 
 ```
+
