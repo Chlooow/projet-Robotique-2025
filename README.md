@@ -27,7 +27,7 @@ catkin_ws_3/
         │   └── object_follower.py  # Nœud de commande (Mouvement)
         └── worlds/
             └── projet.world        # Environnement Gazebo
-
+```
 
 Voici le code Markdown complet de votre fichier `README.md`, structuré et prêt à être copié-collé :
 
@@ -135,4 +135,5 @@ Pour démarrer la simulation et le suivi :
 source devel/setup.bash
 roslaunch robot projet.launch
 
+```
 ```
