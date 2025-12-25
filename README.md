@@ -16,6 +16,9 @@ L'objectif de **Vigilis** est de concevoir un système de surveillance autonome 
 * **Traitement d'image :** OpenCV ( conversion HSV, masquage, calcul de centroïde).
 
 ## Architecture du Workspace (`catkin_ws_3`)
+```rapport -> demonstration.mp4, Presentation.pdf, Presentation.pptx, Rapport-Robotique_Tugba_Chloe.docx, Rapport-Robotique_Tugba_Chloe.pdf
+```
+
 ```text
 catkin_ws_3/
 └── src/
